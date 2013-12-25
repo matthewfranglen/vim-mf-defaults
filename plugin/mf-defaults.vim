@@ -12,7 +12,7 @@ endif
 
 set clipboard=unnamedplus           " Allow the + register to copy between vim instances
 set encoding=utf-8                  " Necessary to show Unicode glyphs
-set expandtab
+set expandtab                       " Convert tabs to spaces
 set hidden                          " Stop the 'unsaved changes' warning when changing buffers
 set hlsearch                        " Highlight searches. Use <leader>h to turn off
 set laststatus=2                    " Always show the statusline
