@@ -1,0 +1,13 @@
+*mf-defaults.txt*    Base settings for Matthew Franglen's vimrc
+
+==============================================================================
+Author:  Matthew Franglen <matthew.franglen+shellvim@gmail.com> *shell-author*
+License: Same terms as Vim itself (see |license|)
+
+==============================================================================
+INTRODUCTION
+
+This plugin is a set of default settings for vim for Matthew Franglen. This is
+somewhat similar to vim-sensible (https://github.com/tpope/vim-sensible) except
+that these are defaults that only Matthew Franglen can agree on. Sometimes not
+even that.
