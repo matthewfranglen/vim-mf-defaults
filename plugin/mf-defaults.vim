@@ -70,6 +70,9 @@ function s:AddCustomMaps()
 
     " \p changes paste mode.
     nmap <leader>p :set paste!<CR>
+
+    " \c copies the text into the clipboard using xsel
+    vmap <leader>c :'<,'> ! xsel -b -i<CR>
 endfunction
 
 function s:AddArrowKeyMaps()
