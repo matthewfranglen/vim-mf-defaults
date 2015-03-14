@@ -1,11 +1,18 @@
 " mf-defaults.vim - Default settings for vim
 " Maintainer:       Matthew Franglen
-" Version:          0.0.2
+" Version:          0.0.3
 
 if exists('g:loaded_mf_defaults') || &compatible
   finish
 endif
 let g:loaded_mf_defaults = 1
+
+function s:Main()
+    call s:LoadSettings()
+    call s:ConfigureUndoFiles()
+    call s:ApplyKeymapping()
+    call s:LoadAutoCommands()
+endfunction
 
 function s:LoadSettings()
     set clipboard=unnamedplus           " Allow the + register to copy between vim instances
@@ -129,7 +136,4 @@ function s:FileIsInsane()
     return line('$') > 100 * 1000
 endfunction
 
-call s:LoadSettings()
-call s:ConfigureUndoFiles()
-call s:ApplyKeymapping()
-call s:LoadAutoCommands()
+call s:Main()
