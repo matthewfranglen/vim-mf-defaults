@@ -7,6 +7,13 @@ if exists('g:loaded_mf_defaults') || &compatible
 endif
 let g:loaded_mf_defaults = 1
 
+function s:Main()
+    call s:LoadSettings()
+    call s:ConfigureUndoFiles()
+    call s:ApplyKeymapping()
+    call s:LoadAutoCommands()
+endfunction
+
 function s:LoadSettings()
     set clipboard=unnamedplus           " Allow the + register to copy between vim instances
     set encoding=utf-8                  " Necessary to show Unicode glyphs
@@ -129,7 +136,4 @@ function s:FileIsInsane()
     return line('$') > 100 * 1000
 endfunction
 
-call s:LoadSettings()
-call s:ConfigureUndoFiles()
-call s:ApplyKeymapping()
-call s:LoadAutoCommands()
+call s:Main()
