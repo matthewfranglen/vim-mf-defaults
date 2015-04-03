@@ -1,6 +1,6 @@
 " mf-defaults.vim - Default settings for vim
 " Maintainer:       Matthew Franglen
-" Version:          0.0.3
+" Version:          0.0.4
 
 if exists('g:loaded_mf_defaults') || &compatible
   finish
@@ -80,6 +80,9 @@ function s:AddCustomMaps()
 
     " \c copies the text into the clipboard using xsel
     vmap <leader>c :'<,'> ! xsel -b -i<CR>
+
+    " Disable shift-k (manpage for word under cursor)
+    map K <nop>
 endfunction
 
 function s:AddArrowKeyMaps()
