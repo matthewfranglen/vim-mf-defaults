@@ -80,6 +80,9 @@ function s:AddCustomMaps()
 
     " \c copies the text into the clipboard using xsel
     vmap <leader>c :'<,'> ! xsel -b -i<CR>
+
+    " Disable shift-k (manpage for word under cursor)
+    map K <nop>
 endfunction
 
 function s:AddArrowKeyMaps()
