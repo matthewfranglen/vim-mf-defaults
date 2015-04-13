@@ -86,9 +86,9 @@ function s:AddCustomMaps()
 endfunction
 
 function s:AddArrowKeyMaps()
-    " Left/Right arrow keys change buffers in all modes
-    map <Left>  <Esc>:bp<CR>
-    map <Right> <Esc>:bn<CR>
+    " Left/Right arrow keys change tabs in all modes
+    map <Left>  <Esc>:tabnext<CR>
+    map <Right> <Esc>:tabprevious<CR>
 
     " Disable up/down arrow keys
     map <Up>   <nop>
