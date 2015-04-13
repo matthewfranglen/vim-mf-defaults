@@ -1,6 +1,6 @@
 " mf-defaults.vim - Default settings for vim
 " Maintainer:       Matthew Franglen
-" Version:          0.0.4
+" Version:          0.0.5
 
 if exists('g:loaded_mf_defaults') || &compatible
   finish
@@ -86,9 +86,9 @@ function s:AddCustomMaps()
 endfunction
 
 function s:AddArrowKeyMaps()
-    " Left/Right arrow keys change buffers in all modes
-    map <Left>  <Esc>:bp<CR>
-    map <Right> <Esc>:bn<CR>
+    " Left/Right arrow keys change tabs in all modes
+    map <Left>  <Esc>:tabprevious<CR>
+    map <Right> <Esc>:tabnext<CR>
 
     " Disable up/down arrow keys
     map <Up>   <nop>
