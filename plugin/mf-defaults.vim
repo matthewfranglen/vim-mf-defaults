@@ -83,13 +83,13 @@ function s:AddCustomMaps()
     vmap <leader>c :'<,'> ! xsel -b -i<CR>
 
     " Disable shift-k (manpage for word under cursor)
-    map K <nop>
+    nmap K <nop>
 
     " Disable shift-Q (ex mode)
-    map Q <nop>
+    nmap Q <nop>
 
     " Make shift-y yank to end of line
-    map Y y$
+    nmap Y y$
 endfunction
 
 function s:AddArrowKeyMaps()
