@@ -84,6 +84,9 @@ function s:AddCustomMaps()
 
     " Disable shift-k (manpage for word under cursor)
     map K <nop>
+
+    " Disable shift-Q (ex mode)
+    map Q <nop>
 endfunction
 
 function s:AddArrowKeyMaps()
