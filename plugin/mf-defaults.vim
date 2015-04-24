@@ -87,6 +87,9 @@ function s:AddCustomMaps()
 
     " Disable shift-Q (ex mode)
     map Q <nop>
+
+    " Make shift-y yank to end of line
+    map Y y$
 endfunction
 
 function s:AddArrowKeyMaps()
