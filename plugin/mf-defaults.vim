@@ -28,6 +28,7 @@ function s:LoadSettings()
     set shiftwidth=4
     set sidescrolloff=5                 " Always have 5 columns around the cursor
     set tabstop=4
+    set linebreak                       " Perform word wrapping without breaking words
 endfunction
 
 " Vim supports undofiles from approximately v7.3. These allow for a persistent
