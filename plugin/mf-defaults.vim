@@ -1,6 +1,6 @@
 " mf-defaults.vim - Default settings for vim
 " Maintainer:       Matthew Franglen
-" Version:          0.0.5
+" Version:          0.0.6
 
 if exists('g:loaded_mf_defaults') || &compatible
   finish
@@ -28,6 +28,7 @@ function s:LoadSettings()
     set shiftwidth=4
     set sidescrolloff=5                 " Always have 5 columns around the cursor
     set tabstop=4
+    set linebreak                       " Perform word wrapping without breaking words
 endfunction
 
 " Vim supports undofiles from approximately v7.3. These allow for a persistent
@@ -82,7 +83,13 @@ function s:AddCustomMaps()
     vmap <leader>c :'<,'> ! xsel -b -i<CR>
 
     " Disable shift-k (manpage for word under cursor)
-    map K <nop>
+    nmap K <nop>
+
+    " Disable shift-Q (ex mode)
+    nmap Q <nop>
+
+    " Make shift-y yank to end of line
+    nmap Y y$
 endfunction
 
 function s:AddArrowKeyMaps()
