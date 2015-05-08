@@ -1,6 +1,6 @@
 " mf-defaults.vim - Default settings for vim
 " Maintainer:       Matthew Franglen
-" Version:          0.0.6
+" Version:          0.0.7
 
 if exists('g:loaded_mf_defaults') || &compatible
   finish
