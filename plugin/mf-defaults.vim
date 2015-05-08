@@ -96,6 +96,8 @@ function s:AddArrowKeyMaps()
     " Left/Right arrow keys change tabs in normal mode
     map  <Left>  <nop>
     map  <Right> <nop>
+    imap <Left>  <nop>
+    imap <Right> <nop>
     nmap <Left>  <Esc>:tabprevious<CR>
     nmap <Right> <Esc>:tabnext<CR>
 
