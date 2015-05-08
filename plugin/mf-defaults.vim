@@ -94,18 +94,16 @@ endfunction
 
 function s:AddArrowKeyMaps()
     " Left/Right arrow keys change tabs in normal mode
-    map  <Left>  <nop>
-    map  <Right> <nop>
-    imap <Left>  <nop>
-    imap <Right> <nop>
-    nmap <Left>  <Esc>:tabprevious<CR>
-    nmap <Right> <Esc>:tabnext<CR>
+    noremap  <Left>  <nop>
+    noremap  <Right> <nop>
+    inoremap <Left>  <nop>
+    inoremap <Right> <nop>
+    nnoremap <Left>  <Esc>:tabprevious<CR>
+    nnoremap <Right> <Esc>:tabnext<CR>
 
     " Disable up/down arrow keys
-    map  <Up>   <nop>
-    map  <Down> <nop>
-    imap <Up>   <nop>
-    imap <Down> <nop>
+    noremap <Up>   <nop>
+    noremap <Down> <nop>
 endfunction
 
 function s:AddWindowMaps()
