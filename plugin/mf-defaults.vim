@@ -102,10 +102,10 @@ function s:AddArrowKeyMaps()
     nmap <Right> <Esc>:tabnext<CR>
 
     " Disable up/down arrow keys
-    noremap  <Up>   ""
-    noremap! <Up>   <nop>
-    noremap  <Down> ""
-    noremap! <Down> <nop>
+    map  <Up>   <nop>
+    map  <Down> <nop>
+    imap <Up>   <nop>
+    imap <Down> <nop>
 endfunction
 
 function s:AddWindowMaps()
