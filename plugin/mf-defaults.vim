@@ -93,9 +93,11 @@ function s:AddCustomMaps()
 endfunction
 
 function s:AddArrowKeyMaps()
-    " Left/Right arrow keys change tabs in all modes
-    map <Left>  <Esc>:tabprevious<CR>
-    map <Right> <Esc>:tabnext<CR>
+    " Left/Right arrow keys change tabs in normal mode
+    map  <Left>  <nop>
+    map  <Right> <nop>
+    nmap <Left>  <Esc>:tabprevious<CR>
+    nmap <Right> <Esc>:tabnext<CR>
 
     " Disable up/down arrow keys
     map <Up>   <nop>
