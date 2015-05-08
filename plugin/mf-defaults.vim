@@ -1,6 +1,6 @@
 " mf-defaults.vim - Default settings for vim
 " Maintainer:       Matthew Franglen
-" Version:          0.0.9
+" Version:          0.0.10
 
 if exists('g:loaded_mf_defaults') || &compatible
   finish
@@ -102,12 +102,10 @@ function s:AddArrowKeyMaps()
     nmap <Right> <Esc>:tabnext<CR>
 
     " Disable up/down arrow keys
-    map  <Up>   <nop>
-    map  <Down> <nop>
-    imap <Up>   <nop>
-    imap <Down> <nop>
-    nmap <Up>   <nop>
-    nmap <Down> <nop>
+    noremap  <Up>   <nop>
+    noremap! <Up>   <nop>
+    noremap  <Down> <nop>
+    noremap! <Down> <nop>
 endfunction
 
 function s:AddWindowMaps()
