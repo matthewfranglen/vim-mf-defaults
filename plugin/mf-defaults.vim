@@ -1,6 +1,6 @@
 " mf-defaults.vim - Default settings for vim
 " Maintainer:       Matthew Franglen
-" Version:          0.0.7
+" Version:          0.0.8
 
 if exists('g:loaded_mf_defaults') || &compatible
   finish
@@ -96,6 +96,8 @@ function s:AddArrowKeyMaps()
     " Left/Right arrow keys change tabs in normal mode
     map  <Left>  <nop>
     map  <Right> <nop>
+    imap <Left>  <nop>
+    imap <Right> <nop>
     nmap <Left>  <Esc>:tabprevious<CR>
     nmap <Right> <Esc>:tabnext<CR>
 
