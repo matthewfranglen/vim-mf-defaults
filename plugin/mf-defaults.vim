@@ -9,6 +9,7 @@ let g:loaded_mf_defaults = 1
 
 function s:Main()
     call s:LoadSettings()
+    call s:LoadFileSettings()
     call s:ConfigureUndoFiles()
     call s:ApplyKeymapping()
     call s:LoadAutoCommands()
@@ -29,6 +30,11 @@ function s:LoadSettings()
     set sidescrolloff=5                 " Always have 5 columns around the cursor
     set tabstop=4
     set linebreak                       " Perform word wrapping without breaking words
+endfunction
+
+function s:LoadFileSettings()
+    autocmd FileType java set sw=4
+    autocmd FileType mvn_pom set sw=2
 endfunction
 
 " Vim supports undofiles from approximately v7.3. These allow for a persistent
