@@ -69,6 +69,7 @@ function s:ApplyKeymapping()
     call s:AddArrowKeyMaps()
     call s:AddWindowMaps()
     call s:AddBufferMaps()
+    call s:AddTabMaps()
 endfunction
 
 function s:AddCustomMaps()
@@ -90,6 +91,7 @@ function s:AddCustomMaps()
 
     " Disable shift-k (manpage for word under cursor)
     nmap K <nop>
+    vmap K <nop>
 
     " Disable shift-Q (ex mode)
     nmap Q <nop>
@@ -100,16 +102,16 @@ endfunction
 
 function s:AddArrowKeyMaps()
     " Left/Right arrow keys change tabs in normal mode
-    noremap  <Left>  <nop>
-    noremap  <Right> <nop>
-    inoremap <Left>  <nop>
-    inoremap <Right> <nop>
+    map  <Left>  <nop>
+    map  <Right> <nop>
+    imap <Left>  <nop>
+    imap <Right> <nop>
     nnoremap <Left>  <Esc>:tabprevious<CR>
     nnoremap <Right> <Esc>:tabnext<CR>
 
     " Disable up/down arrow keys
-    noremap <Up>   <nop>
-    noremap <Down> <nop>
+    map <Up>   <nop>
+    map <Down> <nop>
 endfunction
 
 function s:AddWindowMaps()
@@ -132,6 +134,13 @@ function s:AddBufferMaps()
     nmap <leader>sk       :leftabove  new<CR>
     nmap <leader>s<down>  :rightbelow new<CR>
     nmap <leader>sj       :rightbelow new<CR>
+endfunction
+
+function s:AddTabMaps()
+    nmap <leader>tn :tabnew
+    nmap <leader>tc :tabclose
+    nmap <leader>tl :-tabmove
+    nmap <leader>tr :+tabmove
 endfunction
 
 function s:LoadAutoCommands()
