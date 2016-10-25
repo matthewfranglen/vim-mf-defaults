@@ -137,10 +137,10 @@ function s:AddBufferMaps()
 endfunction
 
 function s:AddTabMaps()
-    nmap <leader>tn :tabnew
-    nmap <leader>tc :tabclose
-    nmap <leader>tl :-tabmove
-    nmap <leader>tr :+tabmove
+    nmap <leader>tn :tabnew<CR>
+    nmap <leader>tc :tabclose<CR>
+    nmap <leader>tl :-tabmove<CR>
+    nmap <leader>tr :+tabmove<CR>
 endfunction
 
 function s:LoadAutoCommands()
