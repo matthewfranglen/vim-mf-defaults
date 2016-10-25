@@ -69,6 +69,7 @@ function s:ApplyKeymapping()
     call s:AddArrowKeyMaps()
     call s:AddWindowMaps()
     call s:AddBufferMaps()
+    call s:AddTabMaps()
 endfunction
 
 function s:AddCustomMaps()
@@ -133,6 +134,13 @@ function s:AddBufferMaps()
     nmap <leader>sk       :leftabove  new<CR>
     nmap <leader>s<down>  :rightbelow new<CR>
     nmap <leader>sj       :rightbelow new<CR>
+endfunction
+
+function s:AddTabMaps()
+    nmap <leader>tn :tabnew
+    nmap <leader>tc :tabclose
+    nmap <leader>tl :-tabmove
+    nmap <leader>tr :+tabmove
 endfunction
 
 function s:LoadAutoCommands()
