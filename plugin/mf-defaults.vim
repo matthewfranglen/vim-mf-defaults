@@ -90,6 +90,7 @@ function s:AddCustomMaps()
 
     " Disable shift-k (manpage for word under cursor)
     nmap K <nop>
+    vmap K <nop>
 
     " Disable shift-Q (ex mode)
     nmap Q <nop>
