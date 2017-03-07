@@ -1,6 +1,6 @@
 " mf-defaults.vim - Default settings for vim
 " Maintainer:       Matthew Franglen
-" Version:          0.0.12
+" Version:          0.0.16
 
 if exists('g:loaded_mf_defaults') || &compatible
   finish
@@ -145,24 +145,12 @@ endfunction
 
 function s:LoadAutoCommands()
     autocmd! BufEnter * :call s:LoadCustomSettings()
-    autocmd! BufEnter,BufRead,BufWinEnter * :call s:FullSyntaxCheck()
 endfunction
 
 function s:LoadCustomSettings()
     if filereadable("./vimrc")
         source ./vimrc
     endif
-endfunction
-
-function s:FullSyntaxCheck()
-    if s:FileIsInsane()
-        return
-    endif
-    syntax sync fromstart
-endfunction
-
-function s:FileIsInsane()
-    return line('$') > 100 * 1000
 endfunction
 
 call s:Main()
