@@ -1,7 +1,7 @@
 *mf-defaults.txt*    Base settings for Matthew Franglen's vimrc
 
 ==============================================================================
-Author:  Matthew Franglen <matthew.franglen+shellvim@gmail.com> *shell-author*
+Author:  Matthew Franglen <matthew.franglen+defaults@gmail.com> *mf-defaults-author*
 License: Same terms as Vim itself (see |license|)
 
 ==============================================================================
